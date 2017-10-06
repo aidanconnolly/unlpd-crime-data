@@ -6,17 +6,6 @@ from slackclient import SlackClient
 import csv
 import time
 
-# Slack setup
-BOT_ID = "U5NAKN99A"
-SLACK_KEY = "xoxb-192359757316-SC5wh0vZpd1XtjcAwYG2hyf6"
-slack_client = SlackClient(SLACK_KEY)
-
-# Twitter data
-APP_KEY = 'w5QotXpuFcYlPlPhLK919Dc2s'
-APP_SECRET = 'OAfgaWpT2VAh2IZcWEUeqtPYgzvnhadAiknarIJR763XHNBHh7'
-TOKEN_KEY = '871067549970116608-tVoD0Tyct2PVu60S63pNZJGdoq1jIjN'
-TOKEN_SECRET = 'cT35FbywkKnhvDS9CjOBwgodtYQfTtvpHx0SEkfev5l7r'
-
 # Selenium setup
 path_to_chromedriver = '/Users/Aidan/Downloads/chromedriver'
 browser = webdriver.Chrome(executable_path=path_to_chromedriver)
