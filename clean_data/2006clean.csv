@@ -67,7 +67,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6000192,SUSPICIOUS PERSON,2006-01-20T00:24:00Z,Inactive,2006-01-20T00:24:00Z,,N/A,17/R-Vine,SIDEWALK,0,0,
 6000194,LARCENY - FROM MOTOR VEHICLE,2006-01-20T09:26:00Z,Inactive,2006-01-18T10:30:00Z,2006-01-19T13:00:00Z,N/A,"""Y"" Street and N. 16th Street",GOVT. PARKING LOT (UNL),120,0,
 6000199,LOST OR STOLEN ITEM,2006-01-20T14:42:00Z,Inactive,2006-01-20T16:35:00Z,2006-01-20T17:00:00Z,College of Business Admin.,512 N. 12th St.,UNL ACADEMIC BUILDING,100,0,
-6000200,ACCIDENTS - P.D. REPORTABLE,2006-01-20T15:02:00Z,Cleared By Exception,2006-01-20T15:00:00Z,,N/A,"1521 ""S"" St.",Union parking lot) (GOVT. PARKING LOT (UNL),0,2500,
+6000200,ACCIDENTS - P.D. REPORTABLE,2006-01-20T15:02:00Z,Cleared By Exception,2006-01-20T15:00:00Z,,N/A,"1521 ""S"" St.",GOVT. PARKING LOT (UNL),0,2500,
 6000202,ALCOHOL - DWI,2006-01-20T23:32:00Z,Cleared By Arrest,2006-01-20T23:32:00Z,,N/A,Centennial-14/P,STREET,0,0,
 6000205,LITTERING,2006-01-21T00:53:00Z,Cleared By Arrest,2006-01-21T00:53:00Z,2006-01-21T00:53:00Z,Andersen Hall,200 Centennial Mall N.,GOVT. PARKING LOT (UNL),0,0,
 6000208,ALCOHOL - DRUNK,2006-01-21T01:55:00Z,Cleared By Exception,2006-01-21T01:55:00Z,,N/A,16th/S-R,STREET,0,0,
@@ -101,7 +101,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6000318,ACCIDENTS - P.D. REPORTABLE,2006-01-28T14:11:00Z,Inactive,2006-01-28T14:11:00Z,2006-01-28T14:11:00Z,N/A,1830  Vine St.,GOVT. PARKING LOT (UNL),0,3500,
 6000319,MEDICAL EMERGENCY,2006-01-28T14:22:00Z,Inactive,2006-01-28T14:22:00Z,,Bob Devaney Sports Center,1600 Court St.,SPORT FACILITIES,0,0,
 6000320,MEDICAL EMERGENCY,2006-01-28T16:28:00Z,Inactive,2006-01-28T16:28:00Z,2006-01-28T16:28:00Z,N/A,4300 Holdrege St.,UNL APARTMENT,0,0,
-6000322,OUTSIDE - O.P.S. OTHER,2006-01-28T18:02:00Z,Inactive,2006-01-28T03:00:00Z,2006-01-28T03:30:00Z,N/A,City of Lincoln,SINGLE FAMILY _ off campus,0,0,
+6000322,OUTSIDE - O.P.S. OTHER,2006-01-28T18:02:00Z,Inactive,2006-01-28T03:00:00Z,2006-01-28T03:30:00Z,N/A,City of Lincoln,SINGLE FAMILY - off campus,0,0,
 6000330,MEDICAL EMERGENCY,2006-01-29T02:19:00Z,Inactive,2006-01-29T02:19:00Z,2006-01-29T02:19:00Z,Neihardt Residence Center,540 N. 16th St.,SIDEWALK,0,0,
 6000333,TELEPHONE - OBSCENE CALLS,2006-01-29T12:00:00Z,Inactive,2006-01-29T11:30:00Z,2006-01-29T11:30:00Z,Cather Hall,609 N. 17th St.,UNL RESIDENCE HALL,0,0,
 6000341,MEDICAL EMERGENCY,2006-01-30T01:38:00Z,Inactive,2006-01-30T01:38:00Z,,Selleck Quad,600 N. 15th St.,UNL RESIDENCE HALL,0,0,
@@ -249,7 +249,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6000683,ALCOHOL - DWI,2006-02-23T01:34:00Z,Cleared By Arrest,2006-02-23T01:34:00Z,,N/A,13-14 on P Street,STREET,0,0,
 6000686,ALCOHOL - DRUNK,2006-02-23T02:41:00Z,Cleared By Exception,2006-02-23T02:41:00Z,,N/A,"721 ""K"" St.","TREATMENT/DETENTION FACILITY (detox, etc.)",0,0,
 6000688,LARCENY - STOLEN BIKE,2006-02-23T12:38:00Z,Inactive,2006-02-15T12:00:00Z,2006-02-23T12:38:00Z,Pound Hall,513 N. 17th St.,UNL RESIDENCE HALL,265,0,
-50004402,,2006-02-23T13:38:00Z,,2006-02-23T13:38:00Z,2006-02-23T13:38:00Z,N/A,, ,0,0,
+50004402,,2006-02-23T13:38:00Z,,2006-02-23T13:38:00Z,2006-02-23T13:38:00Z,N/A,,,0,0,
 6000691,ACCIDENTS - P.D. H&R REPORTABLE,2006-02-23T17:20:00Z,Inactive,2006-02-22T17:20:00Z,2006-02-23T14:00:00Z,14th & Avery Parking Garage,1111 N. 14th St.,GOVT. PARKING GARAGE (UNL),0,1000,
 6000694,ASSAULT - DOMESTIC,2006-02-23T21:03:00Z,Cleared By Arrest,2006-02-23T21:03:00Z,2006-02-23T21:03:00Z,N/A,N. 16th Street and Vine Street,SIDEWALK,0,0,
 6000696,FALSE INFORMATION - GIVEN TO OFC.,2006-02-23T23:46:00Z,Cleared By Arrest,2006-02-23T23:46:00Z,2006-02-23T23:46:00Z,N/A,"N. 17th Street and ""Q"" Street",STREET,0,0,
@@ -271,7 +271,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6000736,SOLICIT/SELL - WITHOUT LICENSE,2006-02-26T14:19:00Z,Cleared By Exception,2006-02-26T13:18:00Z,2006-02-26T14:00:00Z,Abel Hall,860 N. 17th St.,UNL RESIDENCE HALL,0,0,
 6000742,VANDALISM - OTHER,2006-02-27T12:42:00Z,Inactive,2006-02-27T12:46:00Z,2006-02-26T14:00:00Z,N/A,1220,GOVT. PARKING LOT (UNL),0,100,
 6000743,MEDICAL EMERGENCY,2006-02-27T13:10:00Z,Inactive,,2006-02-27T13:10:00Z,Nebraska Hall,900 N. 16th St.,UNL ACADEMIC BUILDING,0,0,
-6000744,DISTURBANCE - OTHER,2006-02-27T15:47:00Z,Inactive,2006-02-27T15:30:00Z,2006-02-27T15:47:00Z,Love Library North,"1248 ""R"" St.", ,0,0,
+6000744,DISTURBANCE - OTHER,2006-02-27T15:47:00Z,Inactive,2006-02-27T15:30:00Z,2006-02-27T15:47:00Z,Love Library North,"1248 ""R"" St.",,0,0,
 6000752,ALCOHOL - DRUNK,2006-02-27T21:44:00Z,Cleared By Exception,2006-02-27T21:44:00Z,,Union-City,"1400 ""R"" St.","STATE OWNED FACILITY (fairgrounds, armory, etc.)",0,0,
 6000753,MEDICAL EMERGENCY,2006-02-28T01:51:00Z,Cleared By Exception,2006-02-28T01:51:00Z,,Abel Hall,860 N. 17th St.,UNL RESIDENCE HALL,0,0,
 6000755,MEDICAL EMERGENCY,2006-02-28T09:58:00Z,Cleared By Exception,2006-02-28T09:58:00Z,,Beadle Center,1901 Vine St.,UNL ACADEMIC BUILDING,0,0,
@@ -294,7 +294,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6000793,ALCOHOL - DWI,2006-03-02T02:38:00Z,Cleared By Arrest,2006-03-02T02:38:00Z,2006-03-02T02:38:00Z,N/A,Vine Street and N. 33rd Street,STREET,0,0,
 6000795,ACCIDENTS - P.D. H&R REPORTABLE,2006-03-02T07:29:00Z,Inactive,,2006-03-02T11:58:00Z,Stadium Drive Parking Garage,625 Stadium Drive,UNKNOWN,0,1000,
 6000798,MEDICAL EMERGENCY,2006-03-02T10:17:00Z,Inactive,,2006-03-02T10:17:00Z,University Health Center,"1500 ""U"" St.",GOVT. PARKING LOT (UNL),0,0,
-6000800,LARCENY - FROM BUILDING,2006-03-02T11:43:00Z,Inactive,2006-03-01T18:30:00Z,2006-03-02T07:55:00Z,Nebraska Hall,900 N. 16th St., ,3950,40,
+6000800,LARCENY - FROM BUILDING,2006-03-02T11:43:00Z,Inactive,2006-03-01T18:30:00Z,2006-03-02T07:55:00Z,Nebraska Hall,900 N. 16th St.,,3950,40,
 6000801,AUTO THEFT,2006-03-02T14:09:00Z,Inactive,2006-03-01T23:00:00Z,2006-03-02T07:00:00Z,Alpha Gamma Sigma,4001 Holdrege St.,OFF CAMPUS/GREEK HOUSING,2000,0,
 6000805,ALCOHOL - MINOR IN POSSESSION,2006-03-02T20:06:00Z,Cleared By Arrest,2006-03-02T20:06:00Z,,Love Library North,"1248 ""R"" St.",LIBRARY,0,0,
 6000810,MEDICAL EMERGENCY,2006-03-03T10:25:00Z,Cleared By Exception,2006-03-03T10:25:00Z,2006-03-03T10:25:00Z,Bob Devaney Sports Center,1600 Court St.,SPORT FACILITIES,0,0,
@@ -485,7 +485,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6001402,FORGERY - ALL OTHER,2006-04-12T16:24:00Z,Inactive,2006-03-20T16:40:00Z,,U Stop,2700 South St.,CONVENIENCE STORE,0,0,
 6001401,LOST OR STOLEN ITEM,2006-04-12T17:25:00Z,Unfounded,2006-04-12T17:20:00Z,,N/A,,UNL ACADEMIC BUILDING,25,0,
 6001403,AUTO THEFT,2006-04-12T20:55:00Z,Unfounded,2006-04-09T21:00:00Z,2006-04-12T19:30:00Z,1820 R,,GOVT. PARKING LOT (UNL),1000,0,
-6001404,ALCOHOL - MINOR IN POSSESSION,2006-04-13T01:54:00Z,Cleared By Arrest,2006-04-13T01:54:00Z,,N/A,1902 Vine St.,S.Beadle Lot) (GOVT. PARKING LOT (UNL),0,0,
+6001404,ALCOHOL - MINOR IN POSSESSION,2006-04-13T01:54:00Z,Cleared By Arrest,2006-04-13T01:54:00Z,,N/A,1902 Vine St.,GOVT. PARKING LOT (UNL),0,0,
 6001410,VANDALISM - OTHER,2006-04-13T17:12:00Z,Inactive,2006-04-08T03:00:00Z,,Harper Hall,1150 N. 14th St.,UNL RESIDENCE HALL,145,95,
 6001417,LITTERING,2006-04-13T22:35:00Z,Cleared By Arrest,2006-04-13T22:35:00Z,,N/A,16th/P-Q,COMMERCIAL PARKING LOT,0,0,
 6001426,LARCENY - FROM BUILDING,2006-04-14T10:17:00Z,Inactive,2006-04-11T15:00:00Z,2006-04-12T12:00:00Z,Selleck Quad,600 N. 15th St.,UNL RESIDENCE HALL,0,0,
@@ -504,7 +504,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6001458,LITTERING,2006-04-16T00:54:00Z,Cleared By Arrest,2006-04-16T00:54:00Z,,Andersen Hall,200 Centennial Mall N.,GOVT. PARKING LOT (UNL),0,0,
 6001460,LARCENY - STOLEN BIKE,2006-04-16T16:14:00Z,Cleared By Arrest,2006-04-16T15:30:00Z,2006-04-16T15:45:00Z,Kauffman Hall,630 N. 14th St.,SIDEWALK,1200,0,
 6001461,LARCENY - SHOPLIFTING,2006-04-16T16:39:00Z,Cleared By Arrest,2006-04-16T16:35:00Z,,Kabredlo's,"1540 ""P"" St.",CONVENIENCE STORE,101.07,0,
-6001467,FIRE (WORKING) - NO ALARM,2006-04-17T07:07:00Z,Inactive,2006-04-17T07:00:00Z,,Bob Devaney Sports Center,1600 Court St., ,0,0,
+6001467,FIRE (WORKING) - NO ALARM,2006-04-17T07:07:00Z,Inactive,2006-04-17T07:00:00Z,,Bob Devaney Sports Center,1600 Court St.,,0,0,
 6001470,VANDALISM - OTHER,2006-04-17T10:26:00Z,Inactive,2006-04-14T11:00:00Z,2006-04-17T10:00:00Z,Harper Hall,1150 N. 14th St.,GOVT. LOT/FIELD (UNL),0,300,
 6001476,TRESPASSING,2006-04-17T20:56:00Z,Cleared By Arrest,2006-04-17T20:56:00Z,2006-04-17T20:56:00Z,N/A,N. 146th Street and N. 14th Street,SIDEWALK,0,0,
 6001478,ALCOHOL - DWI,2006-04-17T23:17:00Z,Cleared By Arrest,2006-04-17T23:17:00Z,,N/A,"Centennial Mall and ""P"" Street",STREET,0,0,
@@ -541,7 +541,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6001565,TRESPASSING,2006-04-23T19:28:00Z,Cleared By Arrest,2006-04-23T19:28:00Z,2006-04-23T19:28:00Z,Cather Hall,609 N. 17th St.,UNL RESIDENCE HALL,0,0,
 6001572,ACCIDENTS - P.D. H&R NOT REPORTABLE,2006-04-24T10:17:00Z,Inactive,2006-04-20T09:20:00Z,2006-04-20T10:00:00Z,Richards Hall,560 Stadium Drive,UNL ACADEMIC BUILDING,0,700,
 6001574,TRESPASSING,2006-04-24T12:19:00Z,Cleared By Arrest,2006-04-24T12:19:00Z,,Love Library North,"N. 13th Street and ""R"" Street",LIBRARY,0,0,
-6001573,LARCENY - FROM BUILDING,2006-04-24T13:18:00Z,Cleared By Exception,2006-04-24T13:18:00Z,2006-04-24T13:18:00Z,The Courtyards,733 N. 17th St., ,20,0,
+6001573,LARCENY - FROM BUILDING,2006-04-24T13:18:00Z,Cleared By Exception,2006-04-24T13:18:00Z,2006-04-24T13:18:00Z,The Courtyards,733 N. 17th St.,,20,0,
 6001575,LARCENY - OTHER OR FROM OPEN AREA,2006-04-24T14:06:00Z,Inactive,2006-04-24T08:30:00Z,2006-04-24T09:00:00Z,"Utility Plant, City",905 N. 14th St.,GOVT. LOT/FIELD (UNL),1250,0,
 6001576,LARCENY - FROM BUILDING,2006-04-24T15:01:00Z,Inactive,2006-04-22T21:45:00Z,2006-04-22T22:20:00Z,Abel Hall,860 N. 17th St.,UNL RESIDENCE HALL,200,0,
 6001581,VANDALISM - OTHER,2006-04-24T17:18:00Z,Cleared By Exception,2006-04-22T22:00:00Z,2006-04-24T15:30:00Z,N/A,1220 N. 14th St.,GOVT. PARKING LOT (UNL),0,2000,
@@ -600,7 +600,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6001728,VANDALISM - OTHER,2006-05-05T01:25:00Z,Inactive,2006-05-05T01:25:00Z,,Delta Upsilon,1548 Vine St.,OFF CAMPUS/GREEK HOUSING,0,125,
 6001732,ACCIDENTS - P.D. REPORTABLE,2006-05-05T12:05:00Z,Inactive,2006-05-05T12:00:00Z,,N/A,"N. 15th Street and ""S"" Street",GOVT. PARKING LOT (UNL),0,0,Two Veh. accident occurred in the 15th and S parking lot.
 6001733,LARCENY - FROM MOTOR VEHICLE,2006-05-05T12:41:00Z,Inactive,2006-05-02T18:00:00Z,2006-05-05T12:41:00Z,Acacia,2255 Vine St.,OFF CAMPUS/GREEK HOUSING,200,10,Stolen stereo occurring in the Acacia parking lot.  No suspects.
-6001734,ACCIDENTS - P.D. NOT REPORTABLE,2006-05-05T12:42:00Z,Inactive,2006-05-05T12:40:00Z,,N/A,1220 N. 14th St., ,0,1300,Two Veh. accident occurred in the Area 3 HSS lot.
+6001734,ACCIDENTS - P.D. NOT REPORTABLE,2006-05-05T12:42:00Z,Inactive,2006-05-05T12:40:00Z,,N/A,1220 N. 14th St.,,0,1300,Two Veh. accident occurred in the Area 3 HSS lot.
 6001737,TELEPHONE - OTHER,2006-05-05T15:53:00Z,Inactive,,,Schramm Hall,1130 N. 14th St.,UNL RESIDENCE HALL,0,0,
 6001739,LARCENY - STOLEN BIKE,2006-05-05T20:27:00Z,Cleared By Arrest,,2006-05-05T12:00:00Z,Schramm Hall,1130 N. 14th St.,SIDEWALK,400,0,
 6001744,ALCOHOL - DWI,2006-05-06T00:56:00Z,Cleared By Arrest,2006-05-06T00:56:00Z,,N/A,"N. 16th Street and ""Q"" Street",STREET,0,0,
@@ -967,7 +967,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6002886,LITTERING,2006-08-11T01:12:00Z,Cleared By Arrest,2006-08-11T01:12:00Z,,Andersen Hall,200 Centennial Mall N.,GOVT. PARKING LOT (UNL),0,0,Tierney was observed urinating in Andersen Hall Parking Lot. Cited for Littering and released.
 6002888,MISC - OTHER,2006-08-11T01:24:00Z,Cleared By Arrest,2006-08-11T01:24:00Z,2006-08-11T01:24:00Z,N/A,"N. 11th Street and ""P"" Street",STREET,0,0,Was observed urinating by a vehicle at 11th/P street.  He was cited for Urinating in Public and released.
 6002889,VANDALISM - OTHER,2006-08-11T07:49:00Z,Inactive,2006-08-02T12:00:00Z,2006-08-11T07:49:00Z,1820 R,,GOVT. PARKING LOT (UNL),0,300,Officer dispatched to 1820 R Street reference a vadalism to a UNL food service vehicle.
-6002895,LARCENY - STOLEN BIKE,2006-08-11T18:33:00Z,Cleared By Exception,2006-08-09T08:00:00Z,2006-08-11T15:30:00Z,N/A,1000 N. 44th St.,SINGLE FAMILY _ off campus,125,0,Officers came into contact with three juveniles in possession of stolen bicycles.
+6002895,LARCENY - STOLEN BIKE,2006-08-11T18:33:00Z,Cleared By Exception,2006-08-09T08:00:00Z,2006-08-11T15:30:00Z,N/A,1000 N. 44th St.,SINGLE FAMILY - off campus,125,0,Officers came into contact with three juveniles in possession of stolen bicycles.
 6002897,VANDALISM - BY GRAFFITI,2006-08-11T20:33:00Z,Inactive,2006-08-10T18:00:00Z,2006-08-11T20:00:00Z,Canfield South,501 N. 14th St.,GOVT. PARKING LOT (UNL),0,25,Officer dispatched to the UNL parking lot on the west side of Canfield Administration in regards to graffiti on a sign.
 6002899,LITTERING,2006-08-12T01:07:00Z,Cleared By Arrest,2006-08-12T01:07:00Z,2006-08-12T01:07:00Z,Andersen Hall,200 Centennial Mall N.,GOVT. PARKING LOT (UNL),0,0,Stephens and Vandersnick were observed urinating in the Andersen Hall parking lot.  Both were cited for Littering and released.
 6002900,ALCOHOL - DRUNK,2006-08-12T02:22:00Z,Cleared By Exception,2006-08-12T02:22:00Z,2006-08-12T02:22:00Z,Alpha Tau Omega,"1433 ""R"" St.",OFF CAMPUS/GREEK HOUSING,0,0,"CSO Garrison contacted a male party at ATO House.  Person was being ""difficult"".  Officers arrived and found Hemmingsen to be intoxicated.  Taken into custody and transported to Detox where tested .230 BAC.  TOT Detox."
@@ -1047,7 +1047,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003120,DISTURBANCE - DOMESTIC,2006-08-25T03:26:00Z,Cleared By Arrest,2006-08-25T03:26:00Z,,Abel Hall,860 N. 17th St.,UNL RESIDENCE HALL,0,0,Dispatched to Abel Hall on a VERBAL Domestic Disturbance.  No signs of physical altercation.
 6003122,LARCENY - FROM MOTOR VEHICLE,2006-08-25T06:40:00Z,Inactive,,2006-08-25T06:40:00Z,N/A,"""S"" Street and N. 19th Street",GOVT. PARKING LOT (UNL),0,200,Nick Sell. UNL student had vehicle broke in to. 19th/S-Vine. No time frame as of IR completion.
 6003124,DISTURBANCE - OTHER,2006-08-25T09:34:00Z,Cleared By Exception,2006-08-25T09:34:00Z,,N/A,,SIDEWALK,0,0,"Ragen Gurnee, Non UNL, contacted selling husker clothing by Manter. Given Policy Letter."
-6003127,MISC - OTHER,2006-08-25T09:58:00Z,Cleared By Exception,2006-08-25T09:58:00Z,,N/A,3601 Van Dorn St.,SINGLE FAMILY _ off campus,0,0,"Walthor, UNL employee reported two former part-time employees hadn't returned keys. O'Grady dispatched to help recover."
+6003127,MISC - OTHER,2006-08-25T09:58:00Z,Cleared By Exception,2006-08-25T09:58:00Z,,N/A,3601 Van Dorn St.,SINGLE FAMILY - off campus,0,0,"Walthor, UNL employee reported two former part-time employees hadn't returned keys. O'Grady dispatched to help recover."
 6003128,LARCENY - OTHER OR FROM OPEN AREA,2006-08-25T11:32:00Z,Inactive,2006-08-24T21:00:00Z,2006-08-25T01:00:00Z,Phi Gamma Delta,"1425 ""R"" St.",OFF CAMPUS/GREEK HOUSING,1300,0,
 6003129,LARCENY - FROM BUILDING,2006-08-25T11:35:00Z,Inactive,2006-08-21T12:00:00Z,2006-08-23T19:30:00Z,Lied Center,301 N. 12th St.,"UNL SUPPORT FACILITY (office, service)",100,0,Melanie Rudy reported her portable DVD player stolen from the Lied Center. 08-21-06/08-23-06.
 6003130,STALKING,2006-08-25T12:08:00Z,Inactive,2006-05-11T12:00:00Z,2006-08-22T14:35:00Z,N/A,,SIDEWALK,0,0,Victim came to UNLPD to report being stalked by a past client.
@@ -1105,7 +1105,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003255,VANDALISM - OTHER,2006-09-01T09:03:00Z,Inactive,2006-08-31T16:00:00Z,2006-09-01T09:00:00Z,Vet Basic Sciences,4150 Fair St.,GOVT. LOT/FIELD (UNL),0,1000,"Vandalism to construction equip,east of vet basic,$1,000.00 damage."
 6003264,LOST OR STOLEN ITEM,2006-09-01T14:10:00Z,Inactive,2006-08-28T20:30:00Z,2006-08-30T16:00:00Z,N/A,City of Lincoln,STREET,30,0,Lost or stolen Zip Drive. City of Lincoln
 6003266,MEDICAL EMERGENCY,2006-09-01T14:39:00Z,Inactive,2006-09-01T14:39:00Z,,Ed Weir Track,,"UNL SUPPORT FACILITY (office, service)",0,0,East Union medical report. Menstrual complaint. Victim transported to Bryan East.
-6003276,LARCENY - OTHER OR FROM OPEN AREA,2006-09-01T14:40:00Z,Inactive,2006-08-31T15:00:00Z,,N/A,"""Q"" Street and N. 19th Street",South West Corner) (COMMERCIAL PARKING LOT,60,0,Stolen bike recovered.  PR stated bought bike from unknown black male.  See 06003239
+6003276,LARCENY - OTHER OR FROM OPEN AREA,2006-09-01T14:40:00Z,Inactive,2006-08-31T15:00:00Z,,N/A,"""Q"" Street and N. 19th Street",COMMERCIAL PARKING LOT,60,0,Stolen bike recovered.  PR stated bought bike from unknown black male.  See 06003239
 6003267,LARCENY - FROM BUILDING,2006-09-01T17:54:00Z,Inactive,2006-09-01T01:30:00Z,2006-09-01T09:50:00Z,Theta Xi,"1535 ""R"" St.",OFF CAMPUS/GREEK HOUSING,2685,0,Victims report Laptop computer and backpack stolen from Theta Xi.  Total Loss $2685
 6003274,LARCENY - STOLEN BIKE,2006-09-01T20:30:00Z,Inactive,2006-08-30T20:30:00Z,2006-09-01T12:00:00Z,Memorial Stadium,740 Stadium Drive,SPORT FACILITIES,3512,0,"Larceny Bike, Memorial Stadium."
 6003275,LOST OR STOLEN ITEM,2006-09-01T21:09:00Z,Inactive,,2006-09-01T21:09:00Z,Coliseum,1350 Vine St.,SPORT FACILITIES,30,0,Victim reports key chain w/ keys lost or stolen at Volleyball Game.
@@ -1138,7 +1138,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003315,OUTSIDE - O.P.S. ACCIDENT,2006-09-03T03:21:00Z,Cleared By Arrest,2006-09-03T03:20:00Z,,N/A,"""R"" Street and N. 14th Street",STREET,0,0,OPS Accident 14th and R Street.
 6003317,ALCOHOL - DWI,2006-09-03T04:05:00Z,Cleared By Arrest,2006-09-03T04:05:00Z,2006-09-03T04:05:00Z,N/A,,STREET,0,0,"DWI, .185 BAC, Non UNL"
 6003319,BURGLARY,2006-09-03T15:01:00Z,Inactive,2006-09-02T19:30:00Z,2006-09-03T14:50:00Z,Acacia,2255 Vine St.,OFF CAMPUS/GREEK HOUSING,440,5,
-6003321,OUTSIDE CRIME - REPORTS OUTSIDE JURISDICTION,2006-09-03T17:11:00Z,Inactive,2006-09-03T17:05:00Z,2006-09-03T17:05:00Z,N/A,642 Cooper Road,SINGLE FAMILY _ off campus,0,0,Sexually explicit phone call. Saunders County Nebraska. UNL Student.
+6003321,OUTSIDE CRIME - REPORTS OUTSIDE JURISDICTION,2006-09-03T17:11:00Z,Inactive,2006-09-03T17:05:00Z,2006-09-03T17:05:00Z,N/A,642 Cooper Road,SINGLE FAMILY - off campus,0,0,Sexually explicit phone call. Saunders County Nebraska. UNL Student.
 6003333,ALCOHOL - DWI,2006-09-05T00:23:00Z,Cleared By Arrest,2006-09-05T00:23:00Z,2006-09-05T00:23:00Z,N/A,Salt Creek Roadway and N. 14th Street,STREET,0,0,"DWI, .189 BAC, Non UNL. 14-Stadium/Salt Creek Road."
 6003334,LOST OR STOLEN ITEM,2006-09-05T08:55:00Z,Inactive,2006-09-04T19:00:00Z,2006-09-04T21:00:00Z,N/A,N. 17th Street and Vine Street,GOVT. LOT/FIELD (UNL),10,0,Victim reported they lost their wallet while playing soccer at the rec. fields.
 6003335,LARCENY - STOLEN BIKE,2006-09-05T09:14:00Z,Inactive,2006-09-04T20:00:00Z,2006-09-05T09:00:00Z,Husker Hall,705 N. 23rd St.,SIDEWALK,388,0,Victim called UNLPD to report the theft of their bicycle.
@@ -1148,7 +1148,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003340,LARCENY - OTHER OR FROM OPEN AREA,2006-09-05T16:16:00Z,Inactive,2006-09-05T02:00:00Z,2006-09-05T08:50:00Z,Husker Hall,705 N. 23rd St.,UNL RESIDENCE HALL,35,0,Victim reports having bike seat and post stolen from their bicycle.
 6003341,TRESPASSING,2006-09-05T16:40:00Z,Cleared By Exception,2006-09-05T16:40:00Z,2006-09-05T16:40:00Z,C. Y. Thompson Library,1625 N. 38th St,SIDEWALK,0,0,Officers responded to C.Y. Thompson Library in reference to persons skateboarding.
 6003343,LARCENY - STOLEN BIKE,2006-09-05T17:36:00Z,Inactive,2006-09-05T09:00:00Z,2006-09-05T17:20:00Z,Oldfather Hall,660 N. 12th St.,UNL ACADEMIC BUILDING,750,0,Victim reports their bike stolen form UNL city campus.
-6003346,ACCIDENTS - P.D. H&R REPORTABLE,2006-09-05T22:17:00Z,Inactive,2006-09-05T05:00:00Z,2006-09-05T22:00:00Z,N/A,, ,0,0,Hit and run accident occurring unknown location in the city.
+6003346,ACCIDENTS - P.D. H&R REPORTABLE,2006-09-05T22:17:00Z,Inactive,2006-09-05T05:00:00Z,2006-09-05T22:00:00Z,N/A,,,0,0,Hit and run accident occurring unknown location in the city.
 6003348,ALCOHOL - DWI,2006-09-06T01:15:00Z,Cleared By Arrest,2006-09-06T01:15:00Z,,N/A,N. 17th Street and Vine Street,STREET,0,0,"Veh. stopped on traffic violation, Driver found to be suspended and DUI. Pty lodged under DUS."
 6003349,ALCOHOL - DWI,2006-09-06T01:15:00Z,Cleared By Arrest,2006-09-06T01:15:00Z,2006-09-06T01:15:00Z,N/A,"N. 17th Street and ""X"" Street",STREET,0,0,Stopped on traffic violation found to be DWI. .184 BAC.
 6003352,VANDALISM - OTHER,2006-09-06T14:43:00Z,Inactive,2006-08-30T07:00:00Z,2006-09-06T14:43:00Z,Sigma Nu,625 N. 16th St.,OFF CAMPUS/GREEK HOUSING,20,0,UNL Landscape Services reported a vandalism to the fence behind Sigma Nu fraternity.
@@ -1300,7 +1300,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003726,LARCENY - STOLEN BIKE,2006-09-26T14:31:00Z,Inactive,2006-09-17T18:00:00Z,2006-09-19T10:30:00Z,The Village,1055 N. 16th St.,SIDEWALK,100,0,Larceny stolen bike from outside of The Villages. The bike was stolen between 9-17 and 9-19-06.
 6003728,LOST OR STOLEN ITEM,2006-09-26T15:05:00Z,Cleared By Exception,2006-09-24T15:00:00Z,,Union-City,"1400 ""R"" St.","UNL SUPPORT FACILITY (office, service)",50,0,party lost his wallet
 6003731,MEDICAL EMERGENCY,2006-09-26T18:21:00Z,Cleared By Exception,2006-09-26T18:21:00Z,2006-09-26T18:21:00Z,C.P.N. Food Services N 17th Street,575 N. 17th St.,UNL RESIDENCE HALL,0,0,"party having seizure, transported to Bryan East"
-6003736,ALCOHOL - DRUNK,2006-09-27T01:43:00Z,Cleared By Arrest,2006-09-27T01:43:00Z,,N/A,"N. 17th Street and ""Q"" Street", ,0,0,"Non Student taken to detox were he tested a .323 BAC,"
+6003736,ALCOHOL - DRUNK,2006-09-27T01:43:00Z,Cleared By Arrest,2006-09-27T01:43:00Z,,N/A,"N. 17th Street and ""Q"" Street",,0,0,"Non Student taken to detox were he tested a .323 BAC,"
 6003737,BOMB - THREAT,2006-09-27T05:37:00Z,Cleared By Arrest,2006-09-27T04:08:00Z,2006-09-27T04:10:00Z,17 & R Parking Garage,300 N. 17th St.,GOVT. PARKING GARAGE (UNL),0,0,Unk Male pty approached several members of a Sorority on top floorof 17th street parking garage advising them he had a bomb and to call Police. Area checked utl..
 6003738,BURGLARY,2006-09-27T08:26:00Z,Cleared By Exception,2006-09-26T17:00:00Z,2006-09-27T07:08:00Z,Neihardt Residence Center,540 N. 16th St.,UNL RESIDENCE HALL,320,0,"Stolen computer monitor, scanner, keyboard and mouse from Neihardt computer lab."
 6003740,DISTURBANCE - OTHER,2006-09-27T09:38:00Z,Cleared By Exception,2006-09-27T09:38:00Z,2006-09-27T09:38:00Z,Burnett Hall,"1220 ""T"" St.",UNL ACADEMIC BUILDING,0,0,Officers dispatched to Burnett Hall on a disturbance in progress.  On arrival there was no disturbance.
@@ -1347,7 +1347,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003846,LARCENY - STOLEN BIKE,2006-10-02T16:13:00Z,Inactive,,2006-10-02T15:00:00Z,N/A,"1619 ""R"" St.",ALLEY,210,0,Bike taken from rack
 6003855,ALCOHOL - DRUNK,2006-10-03T00:00:00Z,Cleared By Arrest,2006-10-03T00:00:00Z,,N/A,"N. 12th Street and ""R"" Street",STREET,0,0,Faculty/Staff member from Dental College taken to detox after being observed vomiting from the drivers seat. .194 BAC. Key's not in ignition.
 6003856,ALCOHOL - MINOR IN POSSESSION,2006-10-03T01:32:00Z,Cleared By Arrest,2006-10-03T01:32:00Z,,Abel Hall,860 N. 17th St.,UNL RESIDENCE HALL,0,0,"2 Students observed through their window consuming beer, both cited for MIP. Vodka and bud light removed from room."
-6003859,LOST OR STOLEN ITEM,2006-10-03T11:22:00Z,Inactive,2006-09-25T08:00:00Z,2006-09-29T08:00:00Z,N/A,5010 Happy Hollow Lane,SINGLE FAMILY _ off campus,0,0,Victim reported he has misplaced/lost his remaining season tickets.
+6003859,LOST OR STOLEN ITEM,2006-10-03T11:22:00Z,Inactive,2006-09-25T08:00:00Z,2006-09-29T08:00:00Z,N/A,5010 Happy Hollow Lane,SINGLE FAMILY - off campus,0,0,Victim reported he has misplaced/lost his remaining season tickets.
 6003864,LARCENY - STOLEN BIKE,2006-10-03T18:25:00Z,Inactive,2006-10-03T07:59:00Z,2006-10-03T17:45:00Z,Architecture Hall,402 Stadium Drive,UNL ACADEMIC BUILDING,420,0,Larceny stolen bike occurring from the racks located to the north of Architecture Hall.
 6003868,LOST OR STOLEN ITEM,2006-10-03T23:34:00Z,Inactive,2006-10-03T11:00:00Z,2006-10-03T14:15:00Z,College of Business Admin.,512 N. 12th St.,UNL ACADEMIC BUILDING,100,0,Belated lost car key.
 6003869,MEDICAL EMERGENCY,2006-10-03T23:34:00Z,Inactive,2006-10-03T23:34:00Z,2006-10-03T23:34:00Z,Pound Hall,513 N. 17th St.,SIDEWALK,0,0,a 20 year old female having difficulty breathing. Transported to Hospital via Ambulance.
@@ -1369,7 +1369,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003917,MEDICAL EMERGENCY,2006-10-06T21:34:00Z,Inactive,2006-10-06T21:34:00Z,,College of Dentistry,,HOSPITAL/CLINIC/ETC,0,0,"Female party unconscious.  LFR transported to LGHWest.  Status check, she was doing fine."
 6003920,TELEPHONE - OTHER,2006-10-07T00:36:00Z,Inactive,2006-10-06T23:00:00Z,2006-10-07T15:00:00Z,Sandoz Hall,820 N. 17th St.,UNL RESIDENCE HALL,0,0,Victim reports numerous harassing phone calls.
 6003922,LARCENY - FROM MOTOR VEHICLE,2006-10-07T02:55:00Z,Cleared By Arrest,2006-10-07T02:55:00Z,,Abel Hall,860 N. 17th St.,GOVT. PARKING LOT (UNL),0,250,"CSO observed two UNL students looking into vehicles.  Later contacted and found to be in possession of stolen property and a vehicle window broken.  One cited and transported to Detox, other cited and released.  Both cited for Criminal Mischief/Theft/MIP.  (.108 Bac and .121 BAC)"
-6003923,LARCENY - STOLEN BIKE,2006-10-07T10:37:00Z,Inactive,2006-09-30T14:00:00Z,2006-10-03T12:17:00Z,N/A,2715 N. 53rd St.,Pioneer Hall) (UNIVERSITY/COLLEGE (other than UNL),665,0,Trek Model 7000 stolen from Nebraska Wesleyan Campus.
+6003923,LARCENY - STOLEN BIKE,2006-10-07T10:37:00Z,Inactive,2006-09-30T14:00:00Z,2006-10-03T12:17:00Z,N/A,2715 N. 53rd St.,UNIVERSITY/COLLEGE (other than UNL),665,0,Trek Model 7000 stolen from Nebraska Wesleyan Campus.
 6003925,TELEPHONE - OTHER,2006-10-07T14:30:00Z,Inactive,2006-10-07T14:19:00Z,,N/A,,UNL RESIDENCE HALL,0,0,"Caller stated he was ""Mark"", no inappropriate statements were made as the call call taker hung up prior to him making any comments other than his name."
 6003926,TELEPHONE - OBSCENE CALLS,2006-10-07T14:52:00Z,Inactive,2006-10-07T14:50:00Z,,Schramm Hall,1130 N. 14th St.,UNL RESIDENCE HALL,0,0,"""Mark"", stating he needed help masturbating"
 6003927,TELEPHONE - OTHER,2006-10-07T15:24:00Z,Inactive,2006-10-07T15:15:00Z,2006-10-07T15:15:00Z,Cather Hall,609 N. 17th St.,UNL RESIDENCE HALL,0,0,Victim reports receiving phone calls from unknown male caller.
@@ -1394,8 +1394,8 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6003963,ACCIDENTS - P.D. NOT REPORTABLE,2006-10-10T21:24:00Z,Inactive,2006-10-10T21:14:00Z,2006-10-10T21:14:00Z,Harper Hall,1150 N. 14th St.,GOVT. PARKING LOT (UNL),0,1150,2 vehicle non-injury accident.
 6003965,LARCENY - STOLEN BIKE,2006-10-11T09:06:00Z,Inactive,2006-09-28T00:01:00Z,2006-09-28T23:59:00Z,Love Library South,"1248 ""R"" St.",LIBRARY,250,0,Unsecured bicycle stolen from Love Library South
 6003966,LARCENY - STOLEN BIKE,2006-10-11T10:07:00Z,Inactive,2006-10-10T15:00:00Z,2006-10-11T08:45:00Z,2224 U Street,"2224 ""U"" St.",UNL APARTMENT,405,0,Stolen bicycle which was secured with a cable lock at 2224 U
-6003968,ACCIDENTS - P.D. NOT REPORTABLE,2006-10-11T14:29:00Z,Cleared By Exception,2006-10-11T14:20:00Z,2006-10-11T14:20:00Z,South Stadium Office,"1102 ""T"" St.",parking lot) (GOVT. PARKING LOT (UNL),0,200,Hit and Run accident took place in the parking lot south of Memorial Stadium.
-6003972,MEDICAL EMERGENCY,2006-10-11T19:47:00Z,Cleared By Exception,2006-10-11T19:47:00Z,2006-10-11T19:47:00Z,N/A,"N. 16th Street and ""W"" Street",athletic field) (GOVT. LOT/FIELD (UNL),0,0,Officers along with medical were dispatched to the athletic field at 16th and W Street in regards to a person with an injury.
+6003968,ACCIDENTS - P.D. NOT REPORTABLE,2006-10-11T14:29:00Z,Cleared By Exception,2006-10-11T14:20:00Z,2006-10-11T14:20:00Z,South Stadium Office,"1102 ""T"" St.",GOVT. PARKING LOT (UNL),0,200,Hit and Run accident took place in the parking lot south of Memorial Stadium.
+6003972,MEDICAL EMERGENCY,2006-10-11T19:47:00Z,Cleared By Exception,2006-10-11T19:47:00Z,2006-10-11T19:47:00Z,N/A,"N. 16th Street and ""W"" Street",GOVT. LOT/FIELD (UNL),0,0,Officers along with medical were dispatched to the athletic field at 16th and W Street in regards to a person with an injury.
 6003973,LARCENY - STOLEN BIKE,2006-10-11T20:17:00Z,Inactive,2006-10-04T10:00:00Z,2006-10-11T20:17:00Z,Neihardt Residence Center,540 N. 16th St.,UNL RESIDENCE HALL,310,0,Stolen bike from the area of Neihardt Hall.
 6003980,"PROPERTY DAMAGE - UNINTENTIONAL,NON TRAFFIC",2006-10-12T10:19:00Z,Inactive,2006-10-12T10:19:00Z,,N/A,"N. 12th Street and ""R"" Street",STREET,0,1500,Possible Civil dispute bewtween Lied and Facilities regarding property damage stemming from construction.
 6003979,TRAFFIC - SUSPENDED DRIVER,2006-10-12T11:11:00Z,Cleared By Arrest,2006-10-12T09:41:00Z,,N/A,N. 33rd Street and Holdrege Street,STREET,0,0,"Driver was lodged after discovering he had ""18"" prior DUS arrests."
@@ -1500,7 +1500,7 @@ Case #,Incident Code,Report Time,Case Status,Start Occurred,End Occurred,Buildin
 6004225,ALCOHOL - MINOR IN POSSESSION,2006-10-29T03:26:00Z,Cleared By Arrest,2006-10-29T03:26:00Z,,Schramm Hall,1130 N. 14th St.,UNL RESIDENCE HALL,0,0,Intoxicated minor female contacted by CSO on Schramm 9 lobby passed out.  Officer arrived and woke her up and found her to be an intoxicated minor.  Female was cited for MIPC and released.  (.141 BAC)
 6004227,MEDICAL EMERGENCY,2006-10-29T13:16:00Z,Inactive,2006-10-29T13:16:00Z,,The Village,1055 N. 16th St.,UNL APARTMENT,0,0,Diabetic reaction. Treated with Orange Juice. Left at scene.
 6004229,VANDALISM - OTHER,2006-10-29T17:26:00Z,Inactive,,2006-10-29T17:26:00Z,17 & R Parking Garage,300 N. 17th St.,GOVT. PARKING GARAGE (UNL),0,50,Crosswalk sign damaged. Sign was in breezeway of the 17th and R street garage.
-6004230,ACCIDENTS - P.D. REPORTABLE,2006-10-29T19:59:00Z,Inactive,2006-10-29T19:59:00Z,,N/A,515 N. 19th St.,Parking Lot) (GOVT. PARKING LOT (UNL),0,2000,Two vehilce accident in 19th street parking lot
+6004230,ACCIDENTS - P.D. REPORTABLE,2006-10-29T19:59:00Z,Inactive,2006-10-29T19:59:00Z,,N/A,515 N. 19th St.,GOVT. PARKING LOT (UNL),0,2000,Two vehilce accident in 19th street parking lot
 6004233,OUTSIDE - O.P.S. OTHER,2006-10-29T23:12:00Z,Cleared By Arrest,2006-10-29T23:12:00Z,2006-10-29T23:12:00Z,N/A,"N. 33rd Street and ""T"" Street",STREET,0,0,Vehicle and occupants wanted by LPD for larc fr vehicles which had just occured at 5111 Vine Streets obs by officer Butters at 33rd and Holdrege streets. Vehicle stopped at 33td and T streets and tot LPD.
 6004234,VANDALISM - OTHER,2006-10-30T04:48:00Z,Inactive,,2006-10-30T04:47:00Z,N/A,"1710 ""R"" St.",GOVT. PARKING LOT (UNL),0,100,Parking sign knocked over in the southwest portion of lot.
 6004235,VANDALISM - BY GRAFFITI,2006-10-30T07:29:00Z,Inactive,2006-10-27T17:00:00Z,2006-10-30T07:29:00Z,N/A,401 N. 9th St.,"UNL SUPPORT FACILITY (office, service)",0,100,Spray paint graffiti on building
