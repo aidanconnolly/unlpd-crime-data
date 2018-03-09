@@ -10,7 +10,11 @@ import time
 path_to_chromedriver = '/Users/Aidan/Downloads/chromedriver'
 browser = webdriver.Chrome(executable_path=path_to_chromedriver)
 
+slack_client = SlackClient('xoxb-319271178402-BC6j65WZLRZ4oSsiT3eglEuR')
+
 def formatAPDateTime(date_object):
+    if date_object == "Unknown":
+        return "Unknown"
     if date_object.month == 9:
         new_date = "Sept. " + \
             datetime.strftime(date_object, "%d, %Y").lstrip("0")
@@ -107,8 +111,11 @@ def parse_crime(incident_list):
                 incident_occurred_object.find_all('span'))
             if incident_occurred_span_count == 1:
                 incident_occurred_text = incident_occurred_object.text
-                incident_occurred_time = datetime.strptime(
-                    incident_occurred_text, " Date: %m/%d/%Y %H:%M")
+                if incident_occurred_text == ":\xa0Unknown":
+                    incident_occurred_time = "Unknown"
+                else:
+                    incident_occurred_time = datetime.strptime(
+                        incident_occurred_text, " Date: %m/%d/%Y %H:%M")
                 incident_occurred_time2 = None
             elif incident_occurred_span_count == 2:
                 incident_occurred_text = incident_occurred_object.text[10:26]
@@ -174,7 +181,7 @@ def create_post(crime_object):
         print(slack_post)
     #twitter = Twython(APP_KEY, APP_SECRET, TOKEN_KEY, TOKEN_SECRET)
     #twitter.update_status(status=tweet)
-    slack_client.api_call("chat.postMessage", channel='C5NAM8SN8', text=slack_post, as_user=True)
+    slack_client.api_call("chat.postMessage", channel='C49E1F45R', text=slack_post, as_user=True)
 
 # Date calculation
 today = date.today()
