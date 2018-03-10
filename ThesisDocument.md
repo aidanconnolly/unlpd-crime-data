@@ -3,13 +3,17 @@ After the University of Nebraska-Lincoln Police department began publishing thei
 
 However, there is no way to analyze the data. There's no way to see how crime reports have evolved over time. Other people have developed programs to look at past trends and outliers to see how things have changed, but there was no way to know when new outliers were happening. The goal of this program is to fill that gap.
 
-This program uses Python to calculate the average number of reports per month for each crime type. Then, as the reports come in each month, it checks to see if any crime type has an abnormally high amount of crimes reported. At the end of the month, it checks to see if an unusually low number of crimes were reported for a crime type.
+This program uses Python to calculate the average number of reports per month for each crime type. Then, as the reports come in each month, it checks to see if any crime type has an abnormally high number of crimes reported. At the end of the month, it checks to see if an unusually low number of crimes were reported for a crime type.
 
 If an abnormality is found, a message is created and sent to a Slack channel. This allows journalists to be notified of the abnormality. From there, they're able to look into the reports to determine if it is worth a story.
-# Background
-# Relevance to field
-Crime reports are often the focus of news stories. # Previous work
-# Process
+
+# Background
+
+# Relevance to field
+Crime reports are often the focus of news stories. 
+# Previous work
+
+# Process
 ## Downloading the data
 To start, I needed to download as much UNLPD data I could get. Using the advanced search function of the Daily Crime and Fire Log, I was able to download data one year at a time, all the way back to 2005. Then, using [`csvkit`](https://csvkit.readthedocs.io/en/1.0.2/), I was able to trim and stack the files.
 
@@ -165,6 +169,7 @@ export_button.click()
 ```
 
 `selenium` then goes through the pages, filling out the form to get this month's data. The form has automatically moves your cursor when you enter the date. So, to set the beginning date to the first of the month, it finds the field for the first month, hits tab to move to the day field, and enters '01.'  
+
 Then, when it loads the data, it loads it in an `iframe`, which is basically a webpage inside of a webpage. `selenium` has to switch to the `iframe` and then wait for it to load. Once it does, it can click the export button.  
 Because the data always downloads with the same filename, it's important the file is deleted before the program is run again. Otherwise, the new file will have '(1)' after it, causing the program to continue using the old data.
 
@@ -207,6 +212,7 @@ WEAPONS - CONCEALED | 1
 ## Filtering newsworthy crimes
 Now that I had the historical averages and this month's data, the only thing left was to see if this month's data exceeded the thresholds.  
 However, there were some crimes that weren't newsworthy that met the threshold because they were so rare. One standard deviation above the mean for False Security Alarms - Mechanical is 0.126. If one crime was reported under that category, it would trigger an alert, but it's not worth a story.  
+
 At the same time, there are crimes that would trigger an alert if they happened once, and they would be newsworthy. For example, one standard deviation above the mean for suicides is also 0.126. But, we figured those reports would be covered anyway, and it would be more obvious if there was a strange spike in those crimes. So, this program focuses on the crimes that happen more than a couple times per month that aren't normally covered by the media. For us, those crimes include:
 
 ```python
@@ -358,7 +364,10 @@ This uses the [`requests`](https://pypi.python.org/pypi/requests) library to sen
 Here's an example message.
 ![sample Slack message](slack_message.jpg)
 
-# Outcome/applications
-Why open source vs. proprietaryAddress interpretation issues down the road
 
-# Conclusion
+# Outcome/applications
+Why open source vs. proprietary
+Address interpretation issues down the road
+
+
+# Conclusion
