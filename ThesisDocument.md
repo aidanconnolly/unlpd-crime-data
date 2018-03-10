@@ -8,10 +8,17 @@ This program uses Python to calculate the average number of reports per month fo
 If an abnormality is found, a message is created and sent to a Slack channel. This allows journalists to be notified of the abnormality. From there, they're able to look into the reports to determine if it is worth a story.
 
 # Background
+Automation has been a part of journalism for a while, and it has been used in more ways than just alerting journalists. In March 2014, Ken Schwenke developed a program for the Los Angeles Times that automatically wrote a story every time an earthquake is registered above a certain threshold. Using information from the U.S. Geological Survey, ["Quakebot"](https://twitter.com/earthquakesLA) fills in a pre-written template and puts together a story in seconds. All Schwenke has to do is quickly glance over the story before publication, allowing the Los Angeles Times to publish those stories much faster than other publications.
 
-# Relevance to field
-Crime reports are often the focus of news stories. 
-# Previous work
+Automation can help with quantity, too. In July 2014, the Associated Press [began using automated journalism](https://blog.ap.org/announcements/a-leap-forward-in-quarterly-earnings-stories) for its quarterly earnings reports. Previously, staff would comb through earnings reports to show trends and numbers. In an effort to reevaluate its use of resources, AP designed a program to help with the task. 
+
+Now, an algorithm looks at the latest earnings report and uses information from previous reports to automatically generate stories. They went from 300 reports each quarter to 4,000. This allows the journalists to spend more time focusing on the unusual trends and exclusive stories that need a human to write them. The AP estimates the automation of earnings reports has [freed up 20 percent](https://automatedinsights.com/case-studies/associated-press) of the time spent producing reports each quarter.
+
+The Washington Post has also used automated journalism. With [Heliograf](https://www.washingtonpost.com/pr/wp/2017/09/01/the-washington-post-leverages-heliograf-to-cover-high-school-football/?utm_term=.b3bda97099f6), the Post is able to automatically write stories about [local high school sports](https://www.washingtonpost.com/allmetsports/2016-fall/games/football/87473/?utm_term=.674ea9ccc245). The program gets its data from information about when and how each team scored, along with player statistics and weekly rankings.
+
+For more examples and information, check out the Tow Center for Digital Journalism's [Guide to Automated Journalism](https://www.cjr.org/tow_center_reports/guide_to_automated_journalism.php).
+
+While the program I built does not yet automatically write stories, it's in the works, and this program accomplishes the first steps to make that possible.
 
 # Process
 ## Downloading the data
@@ -284,7 +291,8 @@ The only time to check the lower threshold is at the end of the month. So, I nee
 def check_last_day():
     #Get today's date
 	today = datetime.today()
-	#monthrange(year, month) returns weekday of first day of the month and number of days in month, for the specified year and month.
+	#monthrange(year, month) returns weekday of first day of the month
+	# and number of days in month, for the specified year and month.
 	if today.day == monthrange(today.year, today.month)[1]:
 	    return True
 	else:
@@ -364,10 +372,23 @@ This uses the [`requests`](https://pypi.python.org/pypi/requests) library to sen
 Here's an example message.
 ![sample Slack message](slack_message.jpg)
 
-
 # Outcome/applications
-Why open source vs. proprietary
-Address interpretation issues down the road
+To make this program run on a regular basis, I recommend using a task scheduler like [`cron`](https://en.wikipedia.org/wiki/Cron). This will allow the program to run as often as you'd like, but it will only send messages when the thresholds are reached. Now, if a crime does reach the upper threshold at some point during the month, it will continue sending that message until the end of the month. To prevent it from doing so, you can remove it from the `flagged_crimes` list until the next month. 
 
+Also, if you want the program to run faster, you can just used the saved version of the statistics, rather than calculating them again each time. 
+
+```python
+all_years_stats = pd.read_csv('std.csv')
+```
+
+This line uses the most recent version of the data that was saved after calculating the thresholds. This allows you to comment out the commands which count the historical crimes and calculate the thresholds until you update the historical data.
+
+While this program does a lot on its own, it does require some maintenance. As mentioned earlier, the monthly data that's downloaded each time must be deleted before the program runs again. Otherwise, the program will not use the new data. Also, if you want to 
+This program coule be used by almost any person who had an interest in UNLPD data. While that audience may be fairly small, this program could also be used for other data sources, but it would take some tweaking.
+
+At the same time, the historical data is not set to update automatically. If you want data past December 31, 2017, to be included in the calculations of the thresholds, you'll need to download it from the Daily Crime and Fire Log and stack it with the `all_years.csv` file, as mentioned at the beginning of the Process section.
+
+This program is not a definitive solution for finding newsworthy trends in UNLPD crime. It should be used as a tool, in conjunction with standard journalism research and intuition. It may miss some outliers, and it may produce some false positives. Please take the time to investigate any messages this program produces.
 
 # Conclusion
+I'm not sure what this tool will allow people to do. I wanted to make this program open-source to allow others to use it and tweak it to their needs. I think the world can be a better place when we share our talents, and I'm happy to have contributed with this project.
