@@ -1,5 +1,0 @@
-Need Slack API key for messaging
-Need to add last day of month function
-Check necessity of defaultdict
-Find a way to generalize chromedriver path and downloaded data path
-Generalize slack channel ID/inform them how to get channel id
