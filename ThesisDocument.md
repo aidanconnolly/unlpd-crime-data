@@ -5,7 +5,7 @@ However, there is no way to analyze the data. There's no way to see how crime re
 
 This program uses Python to calculate the average number of reports per month for each crime type. Then, as the reports come in each month, it checks to see if any crime type has an abnormally high number of crimes reported. At the end of the month, it checks to see if an unusually low number of crimes were reported for a crime type.
 
-If an abnormality is found, a message is created and sent to a Slack channel. This allows journalists to be notified of the abnormality. From there, they're able to look into the reports to determine if it is worth a story.
+If an abnormality is found, a message is created and sent to a messaging platform common to newsrooms called Slack. This allows journalists to be notified of the abnormality. From there, they're able to look into the reports to determine if it is worth a story.
 
 # Background
 Automation has been a part of journalism for a while, and it has been used in more ways than just alerting journalists. In March 2014, Ken Schwenke developed a program for the Los Angeles Times that automatically wrote a story every time an earthquake is registered above a certain threshold. Using information from the U.S. Geological Survey, ["Quakebot"](https://twitter.com/earthquakesLA) fills in a pre-written template and puts together a story in seconds. All Schwenke has to do is quickly glance over the story before publication, allowing the Los Angeles Times to publish those stories much faster than other publications.
@@ -336,7 +336,7 @@ for index, row in merged.iterrows():
 Then, I compared the count to the lower threshold, instead of the upper threshold. If the count is lower than the threshold, it will create a message, using the same templates from before.
 
 ## Posting to Slack
-Having the messages in the program is great, but it requires someone to constantly check to see if something has popped up. Instead, we can send the messages to Slack, alerting people when a new message is created. Slack is a common program for newsrooms to use, so I figured this would be an easy integration for them.
+Having the messages in the program is great, but it requires someone to constantly check to see if something has popped up. Instead, we can send the messages to Slack, alerting people when a new message is created. Slack is a common program for newsrooms to use, making this an easy integration for them.
 
 ### Setting up Slack
 This feature requires a Slack workspace with the ability to add an [Incoming Webhook](my.slack.com/apps/A0F7XDUAZ-incoming-webhooks). Once you add a configuration and choose a channel for it to post to, you're good to go. Just save the Webhook URL as an environment variable `SLACK_URL`, or replace `os.environ.get('SLACK_URL')` with your URL.
@@ -383,12 +383,11 @@ all_years_stats = pd.read_csv('std.csv')
 
 This line uses the most recent version of the data that was saved after calculating the thresholds. This allows you to comment out the commands which count the historical crimes and calculate the thresholds until you update the historical data.
 
-While this program does a lot on its own, it does require some maintenance. As mentioned earlier, the monthly data that's downloaded each time must be deleted before the program runs again. Otherwise, the program will not use the new data. Also, if you want to 
-This program coule be used by almost any person who had an interest in UNLPD data. While that audience may be fairly small, this program could also be used for other data sources, but it would take some tweaking.
+While this program does a lot on its own, it does require some maintenance. As mentioned earlier, the monthly data that's downloaded each time must be deleted before the program runs again. Otherwise, the program will not use the new data. Also, this program could be used by almost any person who had an interest in UNLPD data. While that audience may be fairly small, this program could also be used for other data sources, but it would take some tweaking.
 
 At the same time, the historical data is not set to update automatically. If you want data past December 31, 2017, to be included in the calculations of the thresholds, you'll need to download it from the Daily Crime and Fire Log and stack it with the `all_years.csv` file, as mentioned at the beginning of the Process section.
 
-This program is not a definitive solution for finding newsworthy trends in UNLPD crime. It should be used as a tool, in conjunction with standard journalism research and intuition. It may miss some outliers, and it may produce some false positives. Please take the time to investigate any messages this program produces.
+This program is not a definitive solution for finding newsworthy trends in UNLPD crime. It should be used as a tool, in conjunction with standard journalism research and intuition. It may miss some outliers, and it may produce some false positives. It is therefore imperative that users take the time to investigate any messages this program produces.
 
 # Conclusion
 I'm not sure what this tool will allow people to do. I wanted to make this program open-source to allow others to use it and tweak it to their needs. I think the world can be a better place when we share our talents, and I'm happy to have contributed with this project.
