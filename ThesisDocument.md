@@ -1,4 +1,4 @@
-# Introduction
+# Abstract
 After the University of Nebraska-Lincoln Police department began publishing their Daily Crime and Fire Log online, journalists and other members of the public have been able to view updates almost instantly. They can see what incidents have been reported so far for that day, and they can view any day back to 2005. Using an advanced search, they can also filter the data by date range, location or crime type.  
 
 However, there is no way to analyze the data. There's no way to see how crime reports have evolved over time. Other people have developed programs to look at past trends and outliers to see how things have changed, but there was no way to know when new outliers were happening. The goal of this program is to fill that gap.
@@ -6,6 +6,8 @@ However, there is no way to analyze the data. There's no way to see how crime re
 This program uses Python to calculate the average number of reports per month for each crime type. Then, as the reports come in each month, it checks to see if any crime type has an abnormally high number of crimes reported. At the end of the month, it checks to see if an unusually low number of crimes were reported for a crime type.
 
 If an abnormality is found, a message is created and sent to a messaging platform common to newsrooms called Slack. This allows journalists to be notified of the abnormality. From there, they're able to look into the reports to determine if it is worth a story.
+
+<div style="page-break-after: always;"></div>
 
 # Background
 Automation has been a part of journalism for a while, and it has been used in more ways than just alerting journalists. In March 2014, Ken Schwenke developed a program for the Los Angeles Times that automatically wrote a story every time an earthquake is registered above a certain threshold. Using information from the U.S. Geological Survey, ["Quakebot"](https://twitter.com/earthquakesLA) fills in a pre-written template and puts together a story in seconds. All Schwenke has to do is quickly glance over the story before publication, allowing the Los Angeles Times to publish those stories much faster than other publications.
@@ -19,6 +21,8 @@ The Washington Post has also used automated journalism. With [Heliograf](https:/
 For more examples and information, check out the Tow Center for Digital Journalism's [Guide to Automated Journalism](https://www.cjr.org/tow_center_reports/guide_to_automated_journalism.php).
 
 While the program I built does not yet automatically write stories, it's in the works, and this program accomplishes the first steps to make that possible.
+
+<div style="page-break-after: always;"></div>
 
 # Process
 ## Downloading the data
@@ -62,7 +66,7 @@ These `assert` statements check the count of values against the number of rows, 
 
 ## Cleaning the data
 
-This program doesn't work with the stolen and damaged amounts specifically, but I wanted to go ahead and clean them. To be able to treat them as numbers, I had to remove the extra punctuation and convert the data type of the column from string to float. I also needed to convert the Reported column to datetime objects for time-based analysis.
+This program doesn't work with the stolen and damaged amounts specifically, but cleaned them anyway. To be able to treat them as numbers, I removed the extra punctuation and converted the data type of the column from string to float. I also converted the Reported column to datetime objects for time-based analysis.
 
 ```python
 df['Stolen'] = df['Stolen'].str.replace(',','')
@@ -78,7 +82,7 @@ df['Reported'] = pd.to_datetime(df['Reported'])
 The `replace()` method removes the characters by replacing them with nothing. Then, the `astype()` method converts the Stolen and Damaged columns to float values, and the `to_datetime()` function converts the Reported column to datetime objects.
 
 ## Creating a month column
-To filter the data by month, I needed to create a column with the month each crime was reported. I decided to filter by month as that would be long enough for trends to appear that wouldn't be obvious to the standard journalist.
+To filter the data by month, I needed to create a column with the month each crime was reported. I filtered by month to allow trends to appear that wouldn't be obvious to the standard journalist.
 
 ```python
 df['Month'] = df['Reported'].dt.to_period('M')
@@ -89,14 +93,13 @@ The `to_period()` method returns the time period a datetime is in, and in this c
 
 ## Counting the crimes
 
-Next, I needed to count how many crimes were reported for each crime type. I separated the data by crime type, and then I separated it into subsets by month. I counted how many rows were in those subsets and saved it to a dictionary. Then, all those dictionaries were added to a list, which was converted into a `pandas` dataframe. 
+Next, I needed to count how many crimes were reported for each crime type. I separated the data by crime type and separated it into subsets by month. I counted how many rows were in those subsets and saved it to a dictionary. Then, all those dictionaries were added to a list, which was converted into a `pandas` dataframe. 
 
 ```python
 #This holds the dictionary for each crime
 months_count = []
 #For each crime present in the dataframe
 for crime in df['Incident Code'].unique():
-    print(crime)
     crime_dict = {}
     crime_dict['Crime'] = crime
     #For each month in the dataframe
@@ -163,7 +166,8 @@ browser.get(url)
 browser.find_element_by_id('ctl00_ContentPlaceHolder1_AdvancedSearchButton').click()
 #Find the first date field, hit tab and hit '01'. 
 #This sets the date to the first day of the month
-browser.find_element_by_id('ctl00_ContentPlaceHolder1_DateRange_MonthText1').send_keys('\t01')
+date_box = browser.find_element_by_id('ctl00_ContentPlaceHolder1_DateRange_MonthText1')
+date_box.send_keys('\t01')
 #Find the search button and click it
 browser.find_element_by_id('ctl00_ContentPlaceHolder1_SearchButton').click()
 #Switch to the iframe on the page
@@ -185,9 +189,10 @@ Since we were already maniuplating data in Python, I didn't want the user to hav
 
 ```python
 #Runs in2csv on the downloaded file and converts it to UTF-8
-csv_data = subprocess.check_output(
-    ["in2csv", os.path.expanduser("~/Downloads/DailyCrimeLogSummary.xls")]
-).decode("utf-8")
+csv_data = subprocess.check_output([
+    "in2csv",
+    os.path.expanduser("~/Downloads/DailyCrimeLogSummary.xls"),
+]stderr=subprocess.DEVNULL,).decode("utf-8")
 #Creates a file instance for pandas to use on the next line
 csv_file_instance = StringIO(csv_data)
 #Reads in the csv to a dataframe, skipping the first eight rows
@@ -205,9 +210,7 @@ To clean the monthly data, I used the same process as I used for the historical 
 crime_dict['Month'] = len(crime_subset)
 ```
 
-When saving the crime count to the dictionary, I just save it with the key 'Month.' This allows me to get the count later by just using the key 'Month,' rather than trying to figure out which month it currently is. 
-
-This is a sample of the result.
+When saving the crime count to the dictionary, I just save it with the key 'Month.' This allows me to get the count later by just using the key 'Month,' rather than trying to figure out which month it currently is. This is a sample of the result.
 
 Crime | Month
 :-----|:-----:
@@ -280,35 +283,30 @@ for index, row in merged.iterrows():
             )
 ```
 
-I created two template messages, one with plural words and one with singular words. It iterates through each crime type in the set. If the count for the month is over the upper bound, and if the crime is in the list of flagged_crimes, it will create a message. It checks how many reports there are and uses the appropriate template, substituting in values using the `format()` method.
+I created two template messages. It iterates through each crime type in the set. If the count is over the upper bound, and if the crime is in flagged_crimes, it will create a message. It checks how many reports there are and uses the appropriate template, substituting in values using the `format()` method.
 
 ## Checking the lower threshold
-
-### Checking the last day of the month
-The only time to check the lower threshold is at the end of the month. So, I needed a way to check if it was the last day of the month.
+To check the lower threshold at the end of the month, I needed a way to check if it was the last day of the month.
 
 ```python
-def check_last_day():
-    #Get today's date
-	today = datetime.today()
-	#monthrange(year, month) returns weekday of first day of the month
-	# and number of days in month, for the specified year and month.
-	if today.day == monthrange(today.year, today.month)[1]:
-	    return True
-	else:
-	    return False
+today = datetime.today()
+#monthrange() returns weekday of first of the month and number of days in month.
+if today.day == monthrange(today.year, today.month)[1]:
+    return True
+else:
+    return False
 ```
 
-This function uses the [`datetime`](https://docs.python.org/3/library/datetime.html) library to get today's date. Then, it uses the `monthrange()` function from the [`calendar`](https://docs.python.org/3/library/calendar.html) library to get the last day of the month. If the two are the same, it's the last day of the month.
+This function uses the [`datetime`](https://docs.python.org/3/library/datetime.html) library to get today's date. Then, it uses the `monthrange()` function from the [`calendar`](https://docs.python.org/3/library/calendar.html) library to get the last day of the month. If they're the same, it's the last day of the month.
 
 ### Comparing the values
-Comparing the month's counts to the lower threshold is similar to checking the upper threshold, but with a couple key changes.
+Comparing the counts to the lower threshold is similar to upper threshold process, but with a few changes.
 
 ```python
 merged = pd.merge(all_years_stats, month_count, on='Crime', how='outer')
 ```
 
-When joining the two data frames, an outer join is performed. Outer joins keep all information, even when it's not present in one or the other data frames. This allows us to check crime types that have not occurred in a month.
+When joining the two data frames, an outer join is performed. Outer joins keep all information, even if it's not present in one of the data frames. This allows us to check crime types that have not occurred in a month.
 
 ```python
 for index, row in merged.iterrows():
@@ -334,6 +332,8 @@ for index, row in merged.iterrows():
 ```
 
 Then, I compared the count to the lower threshold, instead of the upper threshold. If the count is lower than the threshold, it will create a message, using the same templates from before.
+
+<div style="page-break-after: always;"></div>
 
 ## Posting to Slack
 Having the messages in the program is great, but it requires someone to constantly check to see if something has popped up. Instead, we can send the messages to Slack, alerting people when a new message is created. Slack is a common program for newsrooms to use, making this an easy integration for them.
@@ -387,7 +387,269 @@ While this program does a lot on its own, it does require some maintenance. As m
 
 At the same time, the historical data is not set to update automatically. If you want data past December 31, 2017, to be included in the calculations of the thresholds, you'll need to download it from the Daily Crime and Fire Log and stack it with the `all_years.csv` file, as mentioned at the beginning of the Process section.
 
+#  Conclusion
+In a world where data is created every second, journalists need to be able to use tools to help sort through that data in an efficient manner. While not a complete product, this program is a proof of concept for a program that could fill this role with UNLPD crime data. 
+
 This program is not a definitive solution for finding newsworthy trends in UNLPD crime. It should be used as a tool, in conjunction with standard journalism research and intuition. It may miss some outliers, and it may produce some false positives. It is therefore imperative that users take the time to investigate any messages this program produces.
 
-# Conclusion
-I'm not sure what this tool will allow people to do. I wanted to make this program open-source to allow others to use it and tweak it to their needs. I think the world can be a better place when we share our talents, and I'm happy to have contributed with this project.
+For example, during the development of this product, an alert was created for four rape reports during the month of February. The average number of rape reports in a month is 0.35. After closer inspection, none of the incidents occurred in February; they were just reported in the same month. That may still warrant a story, but it may not be the story a journalist would expect at first glance.
+
+There were also 27 narcotics possession reports in February, and the average number of reports in a month is 9.5. The most incidents reported in a single day during the month was four, so the rise in reports might not have been completely obvious to a journalist scanning the data. Using this program, he or she would have received a message as soon as the report count crossed the upper threshold, alerting them to the high number of reports.
+
+Without a live newsroom to deploy this program, it's currently uncertain just how useful this program is in its current state. But, with testing over time and continued adjustments, this could be a viable product to help journalists find stories in data.
+
+<div style="page-break-after: always;"></div>
+
+# Appendix I: The full program
+
+```python
+import os #To get Slack API key/expand user directory path
+import pandas as pd #For most data manipulations
+import json #To prepare message for Slack
+import requests #To send message to Slack
+import subprocess #To run in2csv
+import time #To pause after downloading the file
+from io import StringIO #To convert a string to a file
+from datetime import datetime #To check today's date
+from calendar import monthrange #To find last day of month
+from selenium import webdriver #To scrape UNLPD's data
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+def clean_data(df):
+    # Make sure there are no null values for the Case Number, Reported time, Location, 
+    # Stolen amount and Damaged amount
+    assert df['Case #'].count() == len(df) != 0
+    assert df['Reported'].count() == len(df) != 0
+    assert df['Location'].count() == len(df) != 0
+    assert df['Stolen'].count() == len(df) != 0
+    assert df['Damaged'].count() == len(df) != 0
+
+    #Replace non-numerical characters and cast data type to float
+    df['Stolen'] = df['Stolen'].str.replace(',','')
+    df['Stolen'] = df['Stolen'].str.replace('$','')
+    df['Stolen'] = df['Stolen'].astype(float)
+    df['Damaged'] = df['Damaged'].str.replace(',','')
+    df['Damaged'] = df['Damaged'].str.replace('$','')
+    df['Damaged'] = df['Damaged'].astype(float)
+
+    #Cast data type to datetime
+    df['Reported'] = pd.to_datetime(df['Reported'])
+
+    #Double-check data types
+    print(df.dtypes)
+
+    #Create a new column with just the year and month from the Reported column
+    df['Month'] = df['Reported'].dt.to_period('M')
+
+    #Set index to Reported column; allows for slicing by month
+    df2 = df.set_index(['Reported'])
+
+    return df2
+
+def count_crimes(df, all_years=False):
+    #This holds the dictionary for each crime
+    months_count = []
+    #For each crime present in the dataframe
+    for crime in df['Incident Code'].unique():
+        print(crime)
+        crime_dict = {}
+        crime_dict['Crime'] = crime
+        #For each month in the dataframe
+        for month in df['Month'].unique():
+            #Slice the dataframe for one month's data
+            month_subset = df[str(month)]
+            #Filter the subset for instances of the crime
+            crime_subset = month_subset[month_subset['Incident Code'] == crime]
+            #If multiple months, save the count with the month
+            if all_years:
+                crime_dict[str(month)] = len(crime_subset)
+            #Otherwise, just save it with "Month"
+            else:
+                crime_dict['Month'] = len(crime_subset)
+        #Append the dictionary to the months_count list
+        months_count.append(crime_dict)
+    #Convert the list into another dataframe
+    months_count_df = pd.DataFrame(months_count)
+    #To help with speed, save it to a csv
+    if all_years:
+        months_count_df.to_csv('month_count.csv', index=False)
+    return months_count_df
+
+def calculate_stats(df):
+    #Creates a dataframe with the unique crimes
+    std_df = df.filter(['Crime'])
+    #Adds a column with the mean count for each crime
+    std_df['mean'] = df.mean(axis=1)
+    #Adds a column with the standard deviation for each crime
+    std_df['std'] = df.std(axis=1)
+    #Adds a column with a lower threshold
+    std_df['lower'] = std_df['mean'] - std_df['std']
+    #Adds a column with an upper threshold
+    std_df['upper'] = std_df['mean'] + std_df['std']
+    #Save the data to a csv
+    std_df.to_csv('std.csv', index=False)
+    return std_df
+
+def check_last_day():
+    #Get today's date
+    today = datetime.today()
+    #monthrange() returns weekday of first of the month and number of days in month.
+    if today.day == monthrange(today.year, today.month)[1]:
+        return True
+    else:
+        return False
+
+def post_to_slack(message):
+    #Put the message in a dictionary
+    slack_data = {'text': message}
+    #Send the message
+    response = requests.post(
+        #Convert the dictionary to a JSON object
+        webhook_url, data=json.dumps(slack_data),
+        #These headers help Slack interpret the messgae
+        headers={'Content-Type': 'application/json'}
+    )
+    if response.status_code != 200:
+        raise ValueError(
+            'Request to slack returned an error {code}, the response is:\n{text}'.format(
+                code=response.status_code,
+                text=response.text,
+            )
+        )
+
+def find_outliers(all_years_stats, month_count):
+    #This is the list of crimes we decided we were interested in
+    flagged_crimes = [
+        "LOST OR STOLEN ITEM",
+        "FRAUD - CREDIT CARDS/ATM/BANK CARD",
+        "LARCENY - FROM MOTOR VEHICLE",
+        "NARCOTICS - POSSESSION",
+        "BURGLARY",
+        "LARCENY - FROM BUILDING",
+        "ALCOHOL - DWI",
+        "ALCOHOL - DRUNK",
+        "ALCOHOL - MINOR IN POSSESSION",
+        "VANDALISM - OTHER",
+        "LARCENY - STOLEN BIKE",
+        "VANDALISM - BY GRAFFITI",
+        "NARCOTICS - OTHER",
+        "NARCOTICS - SALE/DELIVER",
+    ]
+    #These two templates are used for the messages.
+    plural_msg = "This month, there have been {month_total} {crime} incidents reported. There are normally {mean} incidents reported in a month, and one standard deviation {direction} is {bound}."
+    sing_msg = "This month, there has been {month_total} {crime} incident reported. There are normally {mean} incidents reported in a month, and one standard deviation {direction} is {bound}."
+
+    #If it's the last day, merge the data and keep everything
+    #Then, check the low thresholds
+    if check_last_day():
+        merged = pd.merge(all_years_stats, month_count, on='Crime', how='outer')
+        for index, row in merged.iterrows():
+            if row['lower'] > row['Month'] and row['Crime'] in flagged_crimes:
+                #If it has happened more than once, use plural words
+                if row['Month'] != 1:
+                    message = plural_msg.format(
+                        crime=row['Crime'],
+                        bound=round(row['lower'], 2),
+                        month_total=row['Month'],
+                        mean=round(row['mean'], 2),
+                        direction='below',
+                    )
+                #Otherwise, use singular words
+                else:
+                    message = sing_msg.format(
+                       crime=row['Crime'],
+                       bound=round(row['lower'], 2),
+                       month_total=row['Month'],
+                       mean=round(row['mean'], 2),
+                       direction='below',
+                    )
+                #Print the message here
+                print(message)
+                #Post the message to Slack
+                post_to_slack(message)
+    #Otherwise, only keep the data for crimes that have happened this month
+    else:
+        merged = pd.merge(all_years_stats, month_count, on='Crime', how='inner')
+    #For each row, check if the count has crossed the upper bound
+    for index, row in merged.iterrows():
+        if row['upper'] < row['Month'] and row['Crime'] in flagged_crimes:
+            #If it has happened more than once, use plural words
+            if row['Month'] != 1:
+                plural_msg.format(
+                    crime=row['Crime'],
+                    bound=round(row['upper'], 2),
+                    month_total=row['Month'],
+                    mean=round(row['mean'], 2),
+                    direction='above',
+                )
+            #Otherwise, use singular words
+            else:
+                message = sing_msg.format(
+                    crime=row['Crime'],
+                    bound=round(row['upper'], 2),
+                    month_total=row['Month'],
+                    mean=round(row['mean'], 2),
+                    direction='above',
+                )
+            #Print the message here
+            print(message)
+            #Post the message to Slack
+            post_to_slack(message)
+
+#Read in the csv file
+all_years = pd.read_csv('all_years.csv')
+#Clean the data
+all_years_clean = clean_data(all_years)
+#Count the crime occurences
+all_years_count = count_crimes(all_years_clean, all_years=True)
+#Calculate the thresholds
+all_years_stats = calculate_stats(all_years_count)
+
+#This is needed to set up selenium
+#os.path.expanduser allows the use of a '~'
+path_to_chromedriver = os.path.expanduser('~/Downloads/chromedriver')
+browser = webdriver.Chrome(executable_path=path_to_chromedriver)
+#The URL to the Daily Crime and Fire Log
+url = "https://scsapps.unl.edu/policereports/MainPage.aspx"
+#Go to the URL
+browser.get(url)
+#Find the advanced search button and click it
+browser.find_element_by_id('ctl00_ContentPlaceHolder1_AdvancedSearchButton').click()
+#Find the first date field, hit tab and hit '01'.
+#This sets the date to the first day of the month
+date_box = browser.find_element_by_id('ctl00_ContentPlaceHolder1_DateRange_MonthText1')
+date_box.send_keys('\t01')
+#Find the search button and click it
+browser.find_element_by_id('ctl00_ContentPlaceHolder1_SearchButton').click()
+#Switch to the iframe on the page
+browser.switch_to.frame(browser.find_element_by_id('ctl00_ContentPlaceHolder1_ViewPort'))
+#Find the export button once the iframe loads and click it
+export_button = WebDriverWait(browser, 10).until(
+    EC.presence_of_element_located((By.ID,'ExportButton'))
+)
+export_button.click()
+
+#Wait for the file to download
+time.sleep(5)
+
+#Runs in2csv on the downloaded file and converts it to UTF-8
+csv_data = subprocess.check_output([
+    "in2csv",
+    os.path.expanduser("~/Downloads/DailyCrimeLogSummary.xls"),
+],stderr=subprocess.DEVNULL,).decode("utf-8")
+#Creates a file instance for pandas to use on the next line
+csv_file_instance = StringIO(csv_data)
+#Reads in the csv to a dataframe, skipping the first eight rows
+month_df = pd.read_csv(csv_file_instance, skiprows=8)
+
+#Clean the data
+month_clean = clean_data(month_df)
+#Count the crime occurences
+month_count = count_crimes(month_clean)
+
+webhook_url = os.environ.get('SLACK_URL')
+
+find_outliers(all_years_stats, month_count)
+```
